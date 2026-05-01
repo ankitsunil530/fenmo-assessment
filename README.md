@@ -17,7 +17,7 @@ Backend: https://fenmo-backend-p4u7.onrender.com/
 * Automatically sorted by newest date (latest first)
 * Displays total of visible expenses
 * Handles duplicate submissions safely (idempotent API)
-* User feedback for duplicate or successful submissions
+* Provides user feedback for duplicate or successful submissions
 
 ---
 
@@ -42,7 +42,7 @@ Backend: https://fenmo-backend-p4u7.onrender.com/
   Expenses are always sorted by date (newest first) on:
 
   * Backend (primary logic)
-  * Frontend (additional safety)
+  * Frontend (extra safety layer)
 
 * **Simplicity First Approach:**
   Focused on correctness, reliability, and edge-case handling instead of over-engineering UI
@@ -53,7 +53,7 @@ Backend: https://fenmo-backend-p4u7.onrender.com/
 
 * Used **in-memory storage** instead of a database due to time constraints
 * Data is **not persistent** (resets on server restart)
-* UI is kept minimal to prioritize core functionality
+* Minimal UI to prioritize functionality over design
 
 ---
 
@@ -73,8 +73,20 @@ Backend: https://fenmo-backend-p4u7.onrender.com/
 * Integrate persistent database (MongoDB / PostgreSQL)
 * Add authentication & user-specific data
 * Pagination for large datasets
-* Better UI/UX (toasts, animations)
-* Unit & integration tests
+* Improved UI/UX (toasts, animations)
+* Add unit and integration tests
+
+---
+
+## 📸 Screenshots
+
+### Commit History
+
+![Commit History](image.png)
+
+### Application UI
+![App UI](image-1.png)
+
 
 ---
 
@@ -100,7 +112,7 @@ npm run dev
 
 ## 📌 Summary
 
-This project focuses on building a **reliable, production-like expense tracking system** that correctly handles real-world scenarios such as retries, duplicate submissions, and inconsistent network conditions.
+This project focuses on building a **reliable, production-like expense tracking system** that correctly handles real-world scenarios such as retries, duplicate submissions, and unstable network conditions.
 
 Special emphasis was given to:
 
