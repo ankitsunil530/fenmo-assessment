@@ -81,6 +81,10 @@ app.post("/expenses", (req, res) => {
 /**
  * GET /expenses
  */
+app.get("/", (req, res) => {
+    res.send("Welcome to the Expense Tracker API");
+})
+
 app.get("/expenses", (req, res) => {
   let result = [...expenses];
 
